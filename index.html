@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>PartyMaker</title>
+</head>
+
+<body>
+
+    <!-- Header (contains navigation) -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#ordering">Ordering</a></li>
+                <li><a href="#contacts">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to <span>PartyMaker</span></h1>
+                <p>Your one-stop destination for amazing parties and events!</p>
+                <p>Plan and customize your events with ease. Explore our exciting packages and create memorable moments.
+                </p>
+            </div>
+        </section>
+
+        <!-- Packages Section -->
+        <h2 id="packages">Packages & Prices</h2>
+        <section class="packages">
+            
+            <article class="package-card">
+                <div class="package-img standard-img"></div>
+                <div class="package-info">
+                    <h2>Standard Package</h2>
+                    <p>Includes basic party essentials</p>
+                    <p class="price">$99.99</p>
+                    <button class="amazingBtn">Order Now</button>
+                </div>
+            </article>
+            <article class="package-card">
+                <div class="package-img pro-img"></div>
+                <div class="package-info">
+                    <h2>Pro Package</h2>
+                    <p>Enhanced features for a memorable experience</p>
+                    <p class="price">$149.99</p>
+                    <button class="amazingBtn">Order Now</button>
+                </div>
+            </article>
+            <article class="package-card">
+                <div class="package-img premium-img"></div>
+                <div class="package-info">
+                    <h2>Premium Package</h2>
+                    <p>Exclusive perks for a luxury celebration</p>
+                    <p class="price">$249.99</p>
+                    <button class="amazingBtn">Order Now</button>
+                </div>
+            </article>
+        </section>
+
+        <!-- Ordering Section -->
+        <section class="ordering" id="ordering">
+            <div class="ordering-container">
+                <h2>Create Your Custom Party</h2>
+                <p>Choose your preferences and make your party truly special!</p>
+
+                <!-- Ordering Form -->
+                <form id="customPartyForm">
+                    <label for="partyTheme">Party Theme:</label>
+                    <input type="text" id="partyTheme" name="partyTheme" required>
+
+                    <label for="guestCount">Number of Guests:</label>
+                    <input type="number" id="guestCount" name="guestCount" required>
+
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <label for="additionalRequests">Additional Requests:</label>
+                    <textarea id="additionalRequests" name="additionalRequests" rows="4"></textarea>
+
+                    <button type="submit" class="amazingBtn">Order Now</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="contacts">
+        <p>Contact PartyMaker:</p>
+        <ul>
+            <li>Email: info@partymaker.com</li>
+            <li>Phone: +998 00 000-00-00</li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>

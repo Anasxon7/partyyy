@@ -1,0 +1,368 @@
+body {
+  min-height: 100vh;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(
+    circle,
+    rgba(9, 7, 51, 1) 0%,
+    rgba(26, 56, 94, 1) 14%,
+    rgba(60, 21, 121, 1) 29%,
+    rgba(19, 103, 120, 1) 45%,
+    rgba(66, 3, 97, 1) 60%,
+    rgba(4, 115, 127, 0.8497981351171703) 73%,
+    rgba(49, 5, 117, 1) 85%,
+    rgba(9, 115, 127, 1) 93%
+  );
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+section {
+  min-height: 80vh;
+  background-attachment: fixed;
+}
+
+nav {
+  backdrop-filter: blur(3px);
+  padding: 10px;
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+  border-bottom: 4px solid white;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: cyan;
+}
+
+.hero {
+  position: relative;
+  background-image: url("./pexels-aleksandar-pasaric-2078008.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 100px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+  background-attachment: fixed;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 0.8s ease 1s forwards, textShadow 0.5s ease 1s forwards;
+  text-align: center;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  color: #fff;
+  max-width: 660px;
+}
+
+.hero-content h1 {
+  font-size: 3.5em;
+}
+
+.hero-content span {
+  background: linear-gradient(360deg, #00e1ff, #ff0055);
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textShadow {
+  from {
+    text-shadow: none;
+  }
+  to {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.packages {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 50px;
+  overflow: hidden;
+  background-attachment: fixed;
+}
+
+.package-card {
+  flex: 1;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  border-radius: 30px;
+  transition: transform 0.3s ease;
+  max-height: 65vh;
+}
+
+.package-card:hover {
+  transform: scale(1.05);
+}
+
+.package-img {
+  flex: 1;
+  height: 250px;
+  background-size: cover;
+}
+
+.standard-img {
+  background-image: url("./pexels-nicole-michalou-5779176.jpg");
+}
+
+.pro-img {
+  background-image: url("./pexels-maurício-mascaro-801863.jpg");
+  background-position: center;
+}
+
+.premium-img {
+  background-image: url("./pexels-wendy-wei-1190297.jpg");
+  background-position: bottom;
+}
+
+.package-info {
+  flex: 1;
+  padding: 20px;
+}
+
+.package-info h2 {
+  color: white;
+}
+
+.package-info p {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-weight: bold;
+  color: cyan;
+}
+
+#packages {
+  transform: translateY(20px);
+  text-align: center;
+  color: #fff;
+  font-size: 2em;
+}
+
+.package-info button {
+  font-weight: 600;
+  background-color: cyan;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.package-info button:hover {
+  background-color: cyan;
+}
+
+.ordering {
+  text-align: center;
+  padding: 50px;
+  overflow: hidden;
+  background-attachment: fixed;
+}
+
+.ordering-container {
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 0.8s ease 1s forwards, textShadow 0.5s ease 1s forwards;
+}
+
+.ordering h2 {
+  color: white;
+}
+
+.ordering p {
+  color: #fff;
+}
+
+#customPartyForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#customPartyForm label {
+  margin-top: 10px;
+  color: white;
+}
+
+#customPartyForm input,
+#customPartyForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+#customPartyForm button {
+  font-weight: 600;
+  background-color: cyan;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#customPartyForm button:hover {
+  background-color: cyan;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  border-top: 4px solid white;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  min-height: 10vh;
+  background-attachment: fixed;
+}
+
+footer p {
+  text-align: center;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 0.8s ease 1s forwards, textShadow 0.5s ease 1s forwards;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .packages {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .package-card {
+    width: 100%;
+  }
+}
+
+.amazingBtn {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.amazingBtn:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.amazingBtn:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
